@@ -36,3 +36,21 @@ You can easily run this project on your local machine using Python's built-in we
 - `style.css`: All styles and responsive design.
 - `script.js`: Interactive logic.
 - `Khushi_Shrivastava_Resume.pdf`: Resume file.
+
+## 🔄 How to Update Your Website
+
+Your website is **automatically deployed** whenever you push changes to GitHub.
+
+To make changes:
+
+1.  **Edit** the files on your computer.
+2.  **Save** your changes.
+3.  **Push** them to GitHub using these commands in your terminal:
+
+    ```bash
+    git add .
+    git commit -m "Describe your change here"
+    git push
+    ```
+
+4.  Wait 1-2 minutes, and your live site will automatically update!
