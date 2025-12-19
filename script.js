@@ -49,5 +49,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         lastScroll = currentScroll;
+
+        // Scroll to Top Button Logic
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    });
+
+    // Scroll to Top Click
+    document.getElementById("scrollTopBtn").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+    }));
+
+    // Copy Email Functionality
+    const copyEmailBtn = document.getElementById("copyEmailBtn");
+    copyEmailBtn.addEventListener("click", () => {
+        const email = "shrivastavakhushi419@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            // Visual feedback
+            const originalIcon = copyEmailBtn.innerHTML;
+            copyEmailBtn.innerHTML = '<span style="font-size: 0.8rem; color: var(--accent-color);">Copied!</span>';
+            setTimeout(() => {
+                copyEmailBtn.innerHTML = originalIcon;
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
     });
 });
