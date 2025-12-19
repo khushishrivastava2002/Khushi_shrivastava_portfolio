@@ -29,26 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Navbar scroll effect
+    // Navbar scroll effect (Shadow only)
     const header = document.getElementById('header');
-    let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll <= 0) {
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
-        }
-        
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            // Scroll Down
-            header.style.transform = 'translateY(-100%)';
+            header.style.boxShadow = 'none';
+            header.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
         } else {
-            // Scroll Up
-            header.style.transform = 'translateY(0)';
+            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+            header.style.backgroundColor = 'rgba(10, 25, 47, 0.98)';
         }
-        
-        lastScroll = currentScroll;
 
         // Scroll to Top Button Logic
         const scrollTopBtn = document.getElementById("scrollTopBtn");
