@@ -1,5 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
+    // Typing Effect
+    const typingText = document.querySelector('.typing-text');
+    const words = ["Software Engineer", "Backend Developer", "Problem Solver", "Tech Enthusiast"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            typingText.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50;
+        } else {
+            typingText.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Pause at end of word
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500; // Pause before new word
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Start typing effect
+    if (typingText) {
+        type();
+    }
+
+    // 3D Tilt Effect for Cards
+    const cards = document.querySelectorAll('.project-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
+            const rotateY = ((x - centerX) / centerX) * 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+    });
+
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -9,14 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Intersection Observer for fade-in animations
+    // Intersection Observer for fade-in
     const observerOptions = {
-        root: null,
-        rootMargin: '0px',
         threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -29,23 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Navbar scroll effect (Shadow only)
+    // Navbar scroll effect
     const header = document.getElementById('header');
-
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            header.style.boxShadow = 'none';
-            header.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(15, 12, 41, 0.95)';
+            header.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
         } else {
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
-            header.style.backgroundColor = 'rgba(10, 25, 47, 0.98)';
+            header.style.background = 'rgba(15, 12, 41, 0.8)';
+            header.style.boxShadow = 'none';
         }
 
-        // Scroll to Top Button Logic
+        // Scroll Top Button
         const scrollTopBtn = document.getElementById("scrollTopBtn");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (window.scrollY > 500) {
             scrollTopBtn.style.display = "block";
         } else {
             scrollTopBtn.style.display = "none";
@@ -57,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Mobile Menu Toggle
+    // Mobile Menu
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
 
@@ -66,25 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle("active");
     });
 
-    // Close mobile menu when a link is clicked
     document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navLinks.classList.remove("active");
     }));
-
-    // Copy Email Functionality
-    const copyEmailBtn = document.getElementById("copyEmailBtn");
-    copyEmailBtn.addEventListener("click", () => {
-        const email = "shrivastavakhushi419@gmail.com";
-        navigator.clipboard.writeText(email).then(() => {
-            // Visual feedback
-            const originalIcon = copyEmailBtn.innerHTML;
-            copyEmailBtn.innerHTML = '<span style="font-size: 0.8rem; color: var(--accent-color);">Copied!</span>';
-            setTimeout(() => {
-                copyEmailBtn.innerHTML = originalIcon;
-            }, 2000);
-        }).catch(err => {
-            console.error('Failed to copy: ', err);
-        });
-    });
 });
