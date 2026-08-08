@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khushi Shrivastava | Software Engineer</title>
-    <meta
-      name="description"
-      content="Portfolio of Khushi Shrivastava, a Results-driven Software Engineer specializing in Python, FastAPI, and Django."
-    />
+    <title>Khushi Shrivastava | Software Developer</title>
+    <meta name="description" content="Portfolio of Khushi Shrivastava — Software Developer with 2+ years of experience in Python, FastAPI, Node.js, Computer Vision & AI-powered applications." />
+    <meta name="keywords" content="Khushi Shrivastava, Software Developer, Python, FastAPI, Node.js, Computer Vision, MediaPipe, Backend, Viscus Infotech, RapidSurge" />
+    <meta property="og:title" content="Khushi Shrivastava | Software Developer" />
+    <meta property="og:description" content="Software Developer with 2+ years building scalable backends, CV pipelines & AI apps." />
+    <meta property="og:type" content="website" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="background-gradient"></div>
+    <!-- Background Orbs -->
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
+    <!-- ===== HEADER ===== -->
     <header id="header">
       <div class="container">
         <a href="#" class="logo">KS.</a>
@@ -31,484 +32,412 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
           </ul>
           <button id="theme-toggle" aria-label="Toggle Theme">
-            <svg
-              class="sun-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg
-              class="moon-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           </button>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </nav>
       </div>
     </header>
 
     <main>
+      <!-- ===== HERO ===== -->
       <section id="hero">
-        <div class="container hero-content">
-          <div class="hero-text">
-            <p class="subtitle">Hi, my name is</p>
-            <h1 class="title">Khushi Shrivastava.</h1>
-            <h2 class="role">
-              I am a <span class="typing-text"></span
-              ><span class="cursor">|</span>
-            </h2>
-            <p class="description">
-              I build scalable web applications and robust RESTful APIs using
-              Python, FastAPI, and Django. Passionate about clean architecture
-              and high-performance solutions.
-            </p>
-            <div class="hero-buttons">
-              <a href="#projects" class="btn btn-primary">View My Work</a>
-              <a
-                href="Khushi_Shrivastava_Resume.pdf"
-                target="_blank"
-                class="btn btn-secondary"
-                >Download Resume</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="fade-in">
         <div class="container">
-          <h2 class="section-title">About Me</h2>
-          <div class="about-content">
-            <div class="about-text">
-              <p>
-                I am a results-oriented Software Engineer with over 1.5 years of
-                experience in architecting and developing scalable web
-                applications. My core expertise lies in backend engineering,
-                specializing in high-performance
-                <strong>Python frameworks like FastAPI and Django</strong>.
-              </p>
-              <p>
-                Currently, at <strong>RapidSurge Innovation Pvt Ltd</strong>, I
-                am driving the development of a Quick Commerce Pharmacy
-                Platform. I possess deep proficiency in
-                <strong>MongoDB and SQL databases</strong>, with a proven track
-                record of seamlessly integrating complex third-party services.
-              </p>
-              <p>
-                Here are a few technologies I've been working with recently:
-              </p>
-              <ul class="skills-list-about">
-                <li>Python</li>
-                <li>FastAPI</li>
-                <li>Django</li>
-                <li>JavaScript</li>
-                <li>MongoDB</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-            <div class="about-img">
-              <div class="img-wrapper">
-                <img src="profile.jpeg" alt="Khushi Shrivastava" />
-              </div>
-            </div>
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Open to new opportunities
           </div>
-        </div>
-      </section>
 
-      <section id="experience" class="fade-in">
-        <div class="container">
-          <h2 class="section-title">Experience</h2>
-          <div class="timeline">
-            <!-- Job 1 -->
-            <div class="timeline-item">
-              <div class="timeline-date">July 2024 – Present</div>
-              <div class="timeline-content">
-                <h3>
-                  Software Developer
-                  <span class="company">@ RapidSurge Innovation</span>
-                </h3>
-                <ul>
-                  <li>
-                    Working on <strong>RioAI</strong>, a Quick Commerce Pharmacy
-                    Platform delivering medicines within 15–20 minutes.
-                  </li>
-                  <li>
-                    Developed backend modules using <strong>FastAPI</strong> and
-                    integrated third-party logistics APIs (EvitalRx, Firebase).
-                  </li>
-                  <li>
-                    Implemented background task scheduling using
-                    <strong>Celery and Redis</strong>.
-                  </li>
-                  <li>
-                    Architected backend systems for Picker, Delivery, and
-                    Promoter Apps.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Job 2 -->
-            <div class="timeline-item">
-              <div class="timeline-date">Jul 2023 – Jan 2024</div>
-              <div class="timeline-content">
-                <h3>
-                  Backend Developer
-                  <span class="company">@ Shamaim Lifestyle</span>
-                </h3>
-                <ul>
-                  <li>
-                    Built backend infrastructure from scratch using
-                    <strong>Django</strong>.
-                  </li>
-                  <li>Designed and optimized SQL database schemas.</li>
-                  <li>
-                    Implemented secure authentication & session management.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <h1 class="hero-name">
+            Khushi<br><span class="grad">Shrivastava.</span>
+          </h1>
 
-      <section id="projects" class="fade-in">
-        <div class="container">
-          <h2 class="section-title">Featured Projects</h2>
-          <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card" data-tilt>
-              <div class="project-header">
-                <div class="folder-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-folder"
-                  >
-                    <title>Folder</title>
-                    <path
-                      d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="external-links">
-                  <a href="#" aria-label="GitHub Link"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-github"
-                    >
-                      <title>GitHub</title>
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path></svg
-                  ></a>
-                  <a href="#" aria-label="External Link"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-external-link"
-                    >
-                      <title>External Link</title>
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line></svg
-                  ></a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>Task Management System</h3>
-                <p>
-                  A secure Task Management system using FastAPI with proper API
-                  key authentication. Features user registration, task creation
-                  workflows, and Twilio SMS integration.
-                </p>
-                <div class="tech-stack">
-                  <span>FastAPI</span>
-                  <span>Twilio</span>
-                  <span>Auth</span>
-                </div>
-              </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card" data-tilt>
-              <div class="project-header">
-                <div class="folder-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-folder"
-                  >
-                    <title>Folder</title>
-                    <path
-                      d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="external-links">
-                  <a href="#" aria-label="GitHub Link"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-github"
-                    >
-                      <title>GitHub</title>
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path></svg
-                  ></a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>Doctor Management System</h3>
-                <p>
-                  Healthcare management system with secure user authentication,
-                  MySQL database, and a machine learning-based disease
-                  prediction module.
-                </p>
-                <div class="tech-stack">
-                  <span>MySQL</span>
-                  <span>ML</span>
-                  <span>RBAC</span>
-                </div>
-              </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="project-card" data-tilt>
-              <div class="project-header">
-                <div class="folder-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-folder"
-                  >
-                    <title>Folder</title>
-                    <path
-                      d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="external-links">
-                  <a href="#" aria-label="GitHub Link"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-github"
-                    >
-                      <title>GitHub</title>
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path></svg
-                  ></a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>Real-time Chat Application</h3>
-                <p>
-                  Django-based real-time messaging system with secure file
-                  sharing, responsive UI, and efficient data storage.
-                </p>
-                <div class="tech-stack">
-                  <span>Django</span>
-                  <span>WebSockets</span>
-                  <span>Real-time</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <h2 class="hero-role">
+            I&apos;m a&nbsp;<span class="typing-text"></span><span class="cursor"></span>
+          </h2>
 
-      <section id="skills" class="fade-in">
-        <div class="container">
-          <h2 class="section-title">Technical Skills</h2>
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h3>Languages & Frameworks</h3>
-              <ul class="skill-list">
-                <li>Python</li>
-                <li>FastAPI</li>
-                <li>Django</li>
-                <li>HTML/CSS/JS</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h3>Databases</h3>
-              <ul class="skill-list">
-                <li>MongoDB</li>
-                <li>SQL (MySQL, PostgreSQL)</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h3>Tools & DevOps</h3>
-              <ul class="skill-list">
-                <li>Docker</li>
-                <li>Git</li>
-                <li>Postman</li>
-                <li>Celery/Redis</li>
-                <li>Linux</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="fade-in">
-        <div class="container contact-container">
-          <h2 class="section-title">Contact</h2>
-          <h2 class="big-heading">Get In Touch</h2>
-          <p>
-            I am currently open to new opportunities. Whether you have a
-            question or just want to say hi, I'll try my best to get back to
-            you!
+          <p class="hero-desc">
+            Software Developer with <strong style="color:var(--accent-1);font-weight:700;">2+ years</strong> of experience building scalable backend systems, real-time computer vision pipelines, and AI-powered applications. Passionate about clean architecture, microservices &amp; emerging tech.
           </p>
-          <div class="email-container">
-            <a
-              href="mailto:shrivastavakhushi419@gmail.com"
-              class="btn btn-primary"
-              >Say Hello</a
-            >
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="Khushi_Shrivastava_Resume.pdf" target="_blank" class="btn btn-outline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
           </div>
 
-          <div class="social-links">
-            <a
-              href="https://github.com/khushishrivastava2002"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              class="social-icon"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-github"
-              >
-                <title>GitHub</title>
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/khushi-shrivastava-a694741b3/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              class="social-icon"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-linkedin"
-              >
-                <title>LinkedIn</title>
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num">2+</div>
+              <div class="stat-label">Years Exp.</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">3</div>
+              <div class="stat-label">Companies</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">10+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="reveal">
+        <div class="container">
+          <div class="section-header" style="text-align:left;margin-bottom:52px;">
+            <span class="section-label">01. About Me</span>
+            <h2 class="section-title">Who I <span>Am</span></h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>I'm a results-driven <strong>Software Developer</strong> with over <strong>2+ years of professional experience</strong> designing and building scalable backend systems, computer vision pipelines, and microservice architectures.</p>
+              <p>Currently at <strong>Viscus Infotech Limited</strong>, I'm building a <strong>Live Attendance Monitoring System</strong> powered by Computer Vision — crafting Node.js backends, Python CV scripts, face score logic with <strong>MediaPipe</strong>, and managing distributed microservices with SQL.</p>
+              <p>Previously at <strong>RapidSurge Innovation Pvt Ltd</strong>, I drove development of <strong>RIoAI</strong> — a Quick Commerce Pharmacy Delivery platform — using FastAPI, Docker, and AI tools like <strong>Claude &amp; ChatGPT</strong> to accelerate productivity and ship robust features.</p>
+              <div class="about-chips">
+                <span class="chip">Python</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">Computer Vision</span>
+                <span class="chip">MediaPipe</span>
+                <span class="chip">Docker</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Claude AI</span>
+                <span class="chip">ChatGPT</span>
+              </div>
+            </div>
+            <div class="about-photo-wrap">
+              <div class="about-photo-frame">
+                <img src="profile.jpeg" alt="Khushi Shrivastava — Software Developer" />
+              </div>
+              <div class="about-photo-deco"></div>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience" class="reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">02. Experience</span>
+            <h2 class="section-title">Where I've <span>Worked</span></h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="timeline">
+
+            <!-- Viscus Infotech -->
+            <div class="timeline-item reveal reveal-d1">
+              <div class="timeline-dot">🏢</div>
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <div class="timeline-info">
+                    <div class="timeline-title">Software Developer</div>
+                    <div class="timeline-company">@ Viscus Infotech Limited</div>
+                  </div>
+                  <div class="timeline-badges">
+                    <div class="timeline-period">Jan 2026 – Present</div>
+                    <div class="current-badge">● Current</div>
+                  </div>
+                </div>
+                <ul class="timeline-list">
+                  <li>Building a <strong>Live Attendance Monitoring System</strong> powered by Computer Vision for real-time employee tracking.</li>
+                  <li>Developing scalable <strong>Node.js backends</strong> and <strong>Python computer vision scripts</strong> for face detection pipelines.</li>
+                  <li>Implemented <strong>face score logic</strong> using <strong>MediaPipe</strong> for accurate facial landmark analysis and liveness detection.</li>
+                  <li>Designing and managing <strong>microservices architecture</strong> with optimized <strong>SQL database</strong> schemas for high-throughput attendance data.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag">Node.js</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">MediaPipe</span>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Microservices</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Claude AI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RapidSurge -->
+            <div class="timeline-item reveal reveal-d2">
+              <div class="timeline-dot">🚀</div>
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <div class="timeline-info">
+                    <div class="timeline-title">Software Developer</div>
+                    <div class="timeline-company">@ RapidSurge Innovation Pvt Ltd</div>
+                  </div>
+                  <div class="timeline-badges">
+                    <div class="timeline-period">Jul 2024 – Jan 2026</div>
+                  </div>
+                </div>
+                <ul class="timeline-list">
+                  <li>Built <strong>RIoAI</strong> — a product-based Quick Commerce Pharmacy Delivery App delivering medicines within 15–20 minutes.</li>
+                  <li>Developed backend modules using <strong>FastAPI</strong> and integrated third-party logistics APIs (EvitalRx, Firebase).</li>
+                  <li>Containerized services with <strong>Docker</strong> for consistent development and deployment environments.</li>
+                  <li>Leveraged AI tools — <strong>Claude &amp; ChatGPT</strong> — to accelerate development workflows and boost team productivity.</li>
+                  <li>Implemented background task scheduling using <strong>Celery &amp; Redis</strong>; architected systems for Picker, Delivery, and Promoter Apps.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">Celery</span>
+                  <span class="tag">Redis</span>
+                  <span class="tag">Firebase</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">Claude AI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shamaim -->
+            <div class="timeline-item reveal reveal-d3">
+              <div class="timeline-dot">💻</div>
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <div class="timeline-info">
+                    <div class="timeline-title">Backend Developer Intern</div>
+                    <div class="timeline-company">@ Shamaim Lifestyle</div>
+                  </div>
+                  <div class="timeline-badges">
+                    <div class="timeline-period">Jul 2023 – Jul 2024</div>
+                  </div>
+                </div>
+                <ul class="timeline-list">
+                  <li>Built backend infrastructure from scratch using <strong>Django</strong> REST Framework.</li>
+                  <li>Designed and optimized <strong>SQL database schemas</strong> for performance and scalability.</li>
+                  <li>Implemented secure <strong>authentication &amp; session management</strong> with JWT tokens.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag">Django</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">JWT Auth</span>
+                  <span class="tag">REST API</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects" class="reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">03. Projects</span>
+            <h2 class="section-title">Featured <span>Work</span></h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="projects-grid">
+
+            <div class="project-card reveal reveal-d1">
+              <div class="project-top">
+                <div class="project-icon">🎯</div>
+                <div class="project-links">
+                  <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+              <div class="project-name">Live Attendance System</div>
+              <p class="project-desc">Real-time employee attendance monitoring using Computer Vision. Python CV scripts with MediaPipe face landmark detection, Node.js backend microservices, and SQL database for high-throughput logging.</p>
+              <div class="project-stack">
+                <span>Python</span><span>Node.js</span><span>MediaPipe</span><span>SQL</span><span>Microservices</span>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-d2">
+              <div class="project-top">
+                <div class="project-icon">💊</div>
+                <div class="project-links">
+                  <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+              <div class="project-name">RIoAI — Pharmacy Delivery App</div>
+              <p class="project-desc">Quick Commerce platform delivering medicines in 15–20 minutes. FastAPI backend with Celery/Redis task queues, Docker containerization, EvitalRx &amp; Firebase integrations, AI-assisted development.</p>
+              <div class="project-stack">
+                <span>FastAPI</span><span>Docker</span><span>Celery</span><span>Redis</span><span>MongoDB</span>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-d3">
+              <div class="project-top">
+                <div class="project-icon">✅</div>
+                <div class="project-links">
+                  <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+              <div class="project-name">Task Management System</div>
+              <p class="project-desc">Secure task management API built with FastAPI. Features API key authentication, user registration, task creation workflows, and Twilio SMS integration for notifications.</p>
+              <div class="project-stack">
+                <span>FastAPI</span><span>Twilio</span><span>Auth</span><span>REST API</span>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-d1">
+              <div class="project-top">
+                <div class="project-icon">🏥</div>
+                <div class="project-links">
+                  <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+              <div class="project-name">Doctor Management System</div>
+              <p class="project-desc">Healthcare management system with secure user authentication, MySQL database, role-based access control (RBAC), and a machine learning–based disease prediction module.</p>
+              <div class="project-stack">
+                <span>Python</span><span>MySQL</span><span>ML</span><span>RBAC</span>
+              </div>
+            </div>
+
+            <div class="project-card reveal reveal-d2">
+              <div class="project-top">
+                <div class="project-icon">💬</div>
+                <div class="project-links">
+                  <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+              <div class="project-name">Real-time Chat Application</div>
+              <p class="project-desc">Django-based real-time messaging with WebSocket support, secure file sharing, responsive UI, and efficient database storage for message history.</p>
+              <div class="project-stack">
+                <span>Django</span><span>WebSockets</span><span>Python</span><span>Real-time</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section id="skills" class="reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">04. Skills</span>
+            <h2 class="section-title">Technical <span>Stack</span></h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="skills-grid">
+
+            <div class="skill-card reveal reveal-d1">
+              <span class="skill-card-icon">⚡</span>
+              <div class="skill-card-title">Languages &amp; Frameworks</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML / CSS</span>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-d2">
+              <span class="skill-card-icon">👁️</span>
+              <div class="skill-card-title">Computer Vision &amp; AI</div>
+              <div class="skill-tags">
+                <span class="skill-tag">MediaPipe</span>
+                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">Face Detection</span>
+                <span class="skill-tag">Claude AI</span>
+                <span class="skill-tag">ChatGPT</span>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-d3">
+              <span class="skill-card-icon">🗄️</span>
+              <div class="skill-card-title">Databases</div>
+              <div class="skill-tags">
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Redis</span>
+              </div>
+            </div>
+
+            <div class="skill-card reveal reveal-d1">
+              <span class="skill-card-icon">🐳</span>
+              <div class="skill-card-title">DevOps &amp; Tools</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">Celery</span>
+                <span class="skill-tag">Postman</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Microservices</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">05. Contact</span>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Let's Work Together 🤝</h3>
+            <p>I'm currently open to new opportunities and collaborations. Whether you have a project in mind, a job opportunity, or just want to connect — feel free to reach out!</p>
+
+            <div class="contact-actions">
+              <a href="mailto:shrivastavakhushi419@gmail.com" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Say Hello
+              </a>
+              <a href="Khushi_Shrivastava_Resume.pdf" target="_blank" class="btn btn-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Resume
+              </a>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/khushishrivastava2002" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/khushi-shrivastava-a694741b3/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="mailto:shrivastavakhushi419@gmail.com" class="social-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
       <div class="container">
-        <p>Built by Khushi Shrivastava.</p>
+        <p>Designed &amp; Built by <span>Khushi Shrivastava</span> &nbsp;&middot;&nbsp; 2026</p>
       </div>
     </footer>
 
-    <button id="scrollTopBtn" title="Go to top">↑</button>
+    <button id="scrollTopBtn" title="Back to top" aria-label="Scroll to top">↑</button>
     <script src="script.js"></script>
   </body>
 </html>
