@@ -1,0 +1,256 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2026 Khushi Shrivastava
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.85]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[4pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[4pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{KHUSHI SHRIVASTAVA} \\[8pt]
+\href{https://khushishrivastava2002.github.io/Khushi_shrivastava_portfolio/}{\raisebox{-0.05\height}\faGlobe\ Portfolio} \ $|$ \
+\href{https://github.com/khushishrivastava2002}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \
+\href{https://www.linkedin.com/in/khushi-shrivastava-a694741b3/}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} \ $|$ \
+\href{mailto:shrivastavakhushi419@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ shrivastavakhushi419@gmail.com} \ $|$ \
+\href{tel:+919131390956}{\raisebox{-0.05\height}\faMobile \ +91 9131390956} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{Summary}
+Results-driven Software Developer with 2+ years of professional experience designing and building scalable backend systems, real-time computer vision pipelines, and microservice architectures using \textbf{Python}, \textbf{Node.js}, \textbf{FastAPI}, and \textbf{Django}. Skilled in building REST APIs, facial-recognition pipelines with \textbf{MediaPipe} and \textbf{OpenCV}, and database-driven systems across \textbf{MongoDB}, \textbf{MySQL}, and \textbf{PostgreSQL}. Experienced in third-party API integrations, \textbf{Docker} containerization, and leveraging AI tools (Claude, ChatGPT) to accelerate delivery.
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{joblong}{Software Developer, Viscus Infotech Limited}{January 2026 -- Present}
+\item Building a \textbf{Live Attendance Monitoring System} powered by Computer Vision for real-time employee tracking.
+\item Developing scalable \textbf{Node.js} backends and \textbf{Python} computer vision scripts for face detection pipelines.
+\item Implemented face score logic using \textbf{MediaPipe} for accurate facial landmark analysis and liveness detection.
+\item Designing and managing \textbf{microservices architecture} with optimized \textbf{SQL} database schemas for high-throughput attendance data.
+\end{joblong}
+
+\vspace{6pt}
+
+\begin{joblong}{Software Developer, RapidSurge Innovation Pvt Ltd}{July 2024 -- January 2026}
+\item Built \textbf{RIoAI} -- a product-based Quick Commerce Pharmacy Delivery App delivering medicines within 15--20 minutes.
+\item Developed backend modules using \textbf{FastAPI} and integrated third-party logistics APIs (EvitalRx, Firebase).
+\item Containerized services with \textbf{Docker} for consistent development and deployment environments.
+\item Leveraged AI tools -- \textbf{Claude \& ChatGPT} -- to accelerate development workflows and boost team productivity.
+\item Implemented background task scheduling using \textbf{Celery \& Redis}; architected systems for the Picker, Delivery, and Promoter Apps.
+\end{joblong}
+
+\vspace{6pt}
+
+\begin{joblong}{Backend Developer Intern, Shamaim Lifestyle Pvt Ltd}{July 2023 -- July 2024}
+\item Built backend infrastructure from scratch using \textbf{Django REST Framework}.
+\item Designed and optimized \textbf{SQL} database schemas for performance and scalability.
+\item Implemented secure authentication \& session management with \textbf{JWT} tokens.
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Task Management System with Authentication \& SMS Notifications} & \hfill \href{https://github.com/khushishrivastava2002/Task_Management_Backend}{Link to Demo} \\[4pt]
+\multicolumn{2}{@{}X@{}}{Developed a secure Task Management system using FastAPI with API-key authentication. Implemented user registration and task-creation workflows, and integrated Twilio SMS for OTP-based verification and notifications, ensuring secure and reliable communication.} \\
+\end{tabularx}
+
+\vspace{8pt}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Doctor Management System \& Disease Prediction Platform} & \hfill \\[4pt]
+\multicolumn{2}{@{}X@{}}{Developed a healthcare management system with secure user authentication, MySQL database design, and a machine-learning-based disease-prediction module. Implemented role-based access control (RBAC) and patient-privacy safeguards.} \\
+\end{tabularx}
+
+\vspace{8pt}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Real-time Chat Application \& File Sharing System} & \hfill \\[4pt]
+\multicolumn{2}{@{}X@{}}{Built a Django-based real-time messaging system with WebSocket support, secure file sharing, a responsive UI, and efficient storage for message history.} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+July 2023 -- Aug 2025 & MBA (Information Technology), \textbf{Graduate School of Business} \hfill (CGPA: 8.8) \\[4pt]
+
+Aug 2019 -- May 2023 & B.Tech, \textbf{PIEMR} \hfill (CGPA: 8.67) \\[4pt]
+
+Mar 2018 -- Apr 2019 & Class 12th, CBSE \hfill (70\%) \\[4pt]
+
+Mar 2016 -- Apr 2017 & Class 10th, CBSE \hfill (72\%) \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Languages \& Frameworks: & \normalsize{Python, Node.js, FastAPI, Django, JavaScript} \\[2pt]
+
+Computer Vision \& AI: & \normalsize{MediaPipe, OpenCV, Face Detection} \\[2pt]
+
+Web Technologies: & \normalsize{HTML, CSS, JavaScript, Bootstrap} \\[2pt]
+
+Databases: & \normalsize{MongoDB, MySQL, PostgreSQL, Redis} \\[2pt]
+
+Tools \& DevOps: & \normalsize{Docker, Git/GitHub, Celery, Postman, Linux, Microservices} \\[2pt]
+
+Operating Systems: & \normalsize{Windows, Linux} \\[2pt]
+
+API Integration: & \normalsize{RESTful APIs, Third-party API Integration} \\[2pt]
+
+AI Tools: & \normalsize{Claude, ChatGPT}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Academic Achievements}
+\begin{itemize}[nosep, leftmargin=1em, itemsep=3pt, label=--]
+\item Secured 4th Rank in DAVV University Academic Excellence.
+\item Awarded University Scholar for Outstanding Academic Performance.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+
+\textbf{French Language Certification}\\[2pt]
+\textit{Completed a certification in French language from December 2023 to February 2024.} \\[6pt]
+
+\textbf{Advanced Data Science with Python}\\[2pt]
+\textit{Completed a course in Advanced Data Science with Python from January 2022 to January 2023.}
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+\begin{itemize}[nosep, leftmargin=1em, itemsep=3pt, label=--]
+\item Creative Writing (Poetry and Philosophical Thoughts)
+\item Travel and Photography (Nature Photography)
+\item Technology Innovation and Emerging Trends
+\end{itemize}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+\end{document}
